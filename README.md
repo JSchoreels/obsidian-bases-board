@@ -75,6 +75,9 @@ For example, for a `status` row and a QuickAdd Template choice, use
 choice outside the board still asks for a status. Empty groups and calculated or file
 properties are not passed as variables.
 
+Right-click a card and choose **Delete file** to delete its underlying file. Obsidian's
+file deletion and trash settings apply.
+
 ## Installation
 
 Open Settings → Community plugins, browse for **Bases Board**, then install and enable it.
