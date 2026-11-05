@@ -1,11 +1,11 @@
 {
-	"id": "bases-board",
-	"name": "Bases Board",
-	"version": "1.2.1",
+	"id": "bases-board-jisko",
+	"name": "Bases Board (fork JSchoreels)",
+	"version": "1.2.1-jisko.1",
 	"minAppVersion": "1.10.3",
 	"description": "Interactive board view for bases, use as Kanban or Gallery, with grouping for rows and columns.",
-	"author": "flowing-abyss",
-	"authorUrl": "https://github.com/flowing-abyss",
+	"author": "flowing-abyss, JSchoreels",
+	"authorUrl": "https://github.com/JSchoreels/obsidian-bases-board",
 	"fundingUrl": "https://boosty.to/flowing-abyss/donate",
 	"isDesktopOnly": false
 }

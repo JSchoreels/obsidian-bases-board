@@ -98,19 +98,18 @@ npm run build
 ### How to release
 
 ```bash
-# Bump version, commit, create X.Y.Z tag, and push automatically
-npm version patch    # 1.0.3 → 1.0.4
-# or:
-npm version minor    # 1.0.3 → 1.1.0
-npm version major    # 1.0.3 → 2.0.0
+# Commit curated release notes to CHANGELOG.md and run checks first.
+# Then bump the version, commit, and create a matching tag:
+npm version <version> -m "chore: release %s [skip ci]"
+# Push the release branch and matching tag to the personal fork explicitly.
 ```
 
 What happens under the hood:
 
 1. `npm version` bumps `package.json`, then runs `version` script which updates `manifest.json` and `versions.json`, and stages both.
 2. npm commits everything and creates an `X.Y.Z` git tag (`.npmrc` sets `tag-version-prefix=""`).
-3. `postversion` script automatically runs `git push origin main && git push origin --tags`.
-4. The GitHub Actions `release.yml` workflow triggers on the `*.*.*` tag, checks that it equals the version in `manifest.json`, and publishes a GitHub Release with `main.js`, `styles.css`, and `manifest.json` as assets.
+3. The commit and matching tag must be pushed explicitly to the personal fork.
+4. `[skip ci]` prevents the inherited upstream workflow from publishing generated-only release notes. Create the GitHub release manually with the curated changelog entry and `main.js`, `styles.css`, and `manifest.json` as assets.
 
 ### Version format
 

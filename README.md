@@ -1,8 +1,6 @@
-# Bases Board
+# Bases Board — personal fork
 
-[![Available in Obsidian](https://img.shields.io/badge/Available%20in%20Obsidian-7C3AED?logo=obsidian&logoColor=white&style=flat-square)](https://obsidian.md/plugins?id=bases-board)
-[![Release](https://github.com/flowing-abyss/obsidian-bases-board/actions/workflows/release.yml/badge.svg)](https://github.com/flowing-abyss/obsidian-bases-board/actions/workflows/release.yml)
-[![Downloads](https://img.shields.io/github/downloads/flowing-abyss/obsidian-bases-board/total?style=flat-square&label=downloads&color=blue)](https://github.com/flowing-abyss/obsidian-bases-board/releases)
+Personal distribution of [Bases Board](https://github.com/flowing-abyss/obsidian-bases-board), with QuickAdd note creation and card deletion.
 
 <p align="center">
   <img src="assets/board-dark.png" alt="A research board in the dark theme, with experiments grouped by stage into columns and by area into rows" width="49%">
@@ -80,10 +78,22 @@ file deletion and trash settings apply.
 
 ## Installation
 
-Open Settings → Community plugins, browse for **Bases Board**, then install and enable it.
-You can also install it straight from
-[the plugin page](https://obsidian.md/plugins?id=bases-board). The plugin needs Obsidian
-1.10.3 or later.
+This personal fork uses the distinct plugin ID `bases-board-jisko` so that updates to the
+official **Bases Board** plugin cannot replace it. Install and update it with
+[BRAT](https://github.com/TfTHacker/obsidian42-brat), using
+`JSchoreels/obsidian-bases-board` as the repository. The plugin needs Obsidian 1.10.3 or
+later.
+
+When switching an existing vault from `bases-board` to this fork, copy the original
+plugin's `data.json` into the new plugin folder to retain its settings. Disable the
+original before enabling the fork: both register the same `board-view` type, so only one
+should be active at a time. Existing Bases and notes keep their view configuration.
+
+The fork follows its own GitHub releases. Before releasing, commit curated notes for the
+exact version to `CHANGELOG.md` and run the checks. Include `[skip ci]` in the release
+commit message to skip the inherited upstream tag workflow. Push the release commit and
+its matching tag to this fork, then create the GitHub release with the curated changelog
+entry as its description and `manifest.json`, `main.js`, and `styles.css` as assets.
 
 ## Contributing
 
